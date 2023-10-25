@@ -10,7 +10,7 @@ def button_callback(channel):
 GPIO.setmode(GPIO.BCM)
 
 # pull up
-GPIO.setup(BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD.UP)
+GPIO.setup(BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 # set event
 GPIO.add_event_detect(BUTTON_PIN, GPIO.FALLING, callback=button_callback, bouncetime=200)
