@@ -1,10 +1,13 @@
 import RPi.GPIO as GPIO
+import os
 
 # GPIO pin
 BUTTON_PIN = 18
 
 def button_callback(channel):
 	print("Nice Push!!")
+	os.system('raspistill -o /home/nakanishi/photo/jpg')
+	print("photo complete!")
 
 # BCM mode
 GPIO.setmode(GPIO.BCM)
